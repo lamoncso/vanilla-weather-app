@@ -16,8 +16,109 @@
   </head>
   <body>
     <div class="container">
-      <h1>Hello world!</h1>
-      <button type="button" class="btn btn-info">Search</button>
+      <div class="weather">
+        <form action="">
+          <div class="row">
+            <div class="col-9">
+              <input
+                type="search"
+                placeholder="Enter a city.."
+                class="form-control search-input"
+              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                class="btn btnprimary w-100"
+                value="Search"
+              />
+            </div>
+          </div>
+        </form>
+        <div class="weatherInfo">
+          <div class="row">
+            <div class="col-6">
+              <h1>City</h1>
+              <ul>
+                <li>
+                  <span> Thursday 19 : 29 </span>
+                  ,  scattered clouds
+                </li>
+                <li>
+                  Humidity: 
+                  <strong>78 % </strong>
+                  , Wind:
+                  <strong> 2.24 km/h </strong>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-8">
+              <div class="temperature-container d-flex justify-content-end">
+                <canvas width="" 52 height="" 52></canvas>
+                <div>
+                  <span class="temperature">10</span>
+                  <span class="unit">°C</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="weatherForecest row">
+          <div class="col">
+            <div class="weatherForecastPreview">
+              <div class="forecast-time">Tue</div>
+              <canvas width="38" height="38"></canvas>
+              <div class="forecast-temperature">
+                <span class="forecast-temperature-max">12°</span>
+                <span class="forecast-temperature-min">7°</span>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="weatherForecastPreview">
+              <div class="forecast-time">Wed</div>
+              <canvas width="38" height="38"></canvas>
+              <div class="forecast-temperature">
+                <span class="forecast-temperature-max">12°</span>
+                <span class="forecast-temperature-min">7°</span>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="weatherForecastPreview">
+              <div class="forecast-time">Thu</div>
+              <canvas width="38" height="38"></canvas>
+              <div class="forecast-temperature">
+                <span class="forecast-temperature-max">12°</span>
+                <span class="forecast-temperature-min">7°</span>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="weatherForecastPreview">
+              <div class="forecast-time">Fri</div>
+              <canvas width="38" height="38"></canvas>
+              <div class="forecast-temperature">
+                <span class="forecast-temperature-max">12°</span>
+                <span class="forecast-temperature-min">7°</span>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="weatherForecastPreview">
+              <div class="forecast-time">Sat</div>
+              <canvas width="38" height="38"></canvas>
+              <div class="forecast-temperature">
+                <span class="forecast-temperature-max">12°</span>
+                <span class="forecast-temperature-min">7°</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer>
+          This project was coded by <a href="#">Monika Lauko</a> and is <a href="#">open-sourced on GitHub</a> and <a href="#">hosted on Netlify</a>
+        </footer>
+      </div>
     </div>
     <script src="vanilla-weather-app/src/app.js"></script>
     <script
