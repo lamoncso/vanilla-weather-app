@@ -8,13 +8,14 @@ body {
     margin-bottom: 20px;
 }
 
-.Weather {
+.weather {
   background: #fff;
   border-radius: 16px;
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
   color: #878787;
   font-family: Cerebri-Sans, Helvetica, Arial, sans-serif;
   padding: 40px;
+  min-width: 544px;
 }
 
 .search-form {
@@ -155,3 +156,4 @@ footer {
   margin-top: 55px;
   text-align: center;
 }
+
