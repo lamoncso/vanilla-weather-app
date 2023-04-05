@@ -55,12 +55,11 @@ body {
 }
 
 .unitHumidity ,.unitWind {
-  text-transform: none;
   color: #f65282;
 }
 
 #current-time {
-color: #f65282;
+font-weight: bold ;
 }
 
 .temperature {
@@ -94,7 +93,10 @@ color: #f65282;
   font-weight: 500;
   line-height: 26px;
   margin-bottom: 5px;
-  text-transform: capitalize;
+}
+
+li::first-letter{
+text-transform: capitalize;
 }
 
 .weatherInfo ul strong {
