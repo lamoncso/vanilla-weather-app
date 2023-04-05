@@ -1,6 +1,7 @@
-let today = document.querySelector("#today");
-let currentTime = document.querySelector("#current-time");
-let now = new Date();
+function formatDate(timestamp){
+let date = new Date(timestamp);
+let hour = date.getHours();
+let minutes = date.getMinutes();
 let days = [
   "Sunday",
   "Monday",
@@ -10,18 +11,18 @@ let days = [
   "Friday",
   "Saturday",
 ];
-let day = days[now.getDay()];
-today.innerHTML = `${day}`;
+let day = days[date.getDay()];
 
-let hour = now.getHours();
-let minutes = now.getMinutes();
 if (hour < 10) {
   hour = `0${hour}`;
 }
 if (minutes < 10) {
   minutes = `0${minutes}`;
 }
-currentTime.innerHTML = `${hour}:${minutes}`;
+document.querySelector("#current-time").innerHTML = `${hour}:${minutes}`;
+document.querySelector("#today").innerHTML = `${day}`;
+
+}
 
 function displayTemperature(response) {
   console.log(response.data);
@@ -37,6 +38,7 @@ function displayTemperature(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
+  formatDate(response.data.dt * 1000);
 }
 
 let city = "Eidenberg";
