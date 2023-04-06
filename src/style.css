@@ -68,7 +68,9 @@ font-weight: bold ;
   font-weight: 400;
   font-weight: 700;
   line-height: 1;
-  margin-left: -232px;
+  position: relative;
+  left: -19px;
+  top: -10px;
 }
 
 .unit {
@@ -78,7 +80,7 @@ font-weight: bold ;
   line-height: 36px;
   line-height: 1;
   position: relative;
-  top: -34px;
+  top: -46px;
 }
 
 .Weather canvas {
@@ -140,8 +142,9 @@ text-transform: capitalize;
 
 .weather-img-head {
   position: relative;
-  right: -58px;
-  font-size: 40px;
+  right: -54px;
+  top: -36px;
+  scale: 0.7;
   color: #68dad8;
 }
 

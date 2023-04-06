@@ -38,6 +38,11 @@ function displayTemperature(response) {
     response.data.wind.speed
   );
   formatDate(response.data.dt * 1000);
+  let changeIcon = document
+    .querySelector("#icon");
+console.log(response.data);
+    changeIcon.setAttribute("src",`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+    changeIcon.setAttribute("alt", `${response.data.weather[0].description}`);
 }
 
 let city = "Eidenberg";
