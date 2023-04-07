@@ -204,8 +204,9 @@ text-transform: capitalize;
 
 footer {
   color: rgba(39, 33, 66, 0.4);
-  font-size: 14px;
-  line-height: 12px;
+  font-size: 12px;
+  line-height: 17px;
   margin-top: 55px;
+  margin-bottom: -30px;
   text-align: center;
 }
