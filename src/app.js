@@ -45,7 +45,7 @@ console.log(response.data);
     changeIcon.setAttribute("alt", `${response.data.weather[0].description}`);
 }
 
-let city = "Eidenberg";
+let city = "Kapstadt";
 let apiKey = "8402ccd9e55983fce71eeeaa1d2bd1fc";
 let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather?";
 let units = "metric";
