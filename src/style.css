@@ -69,16 +69,29 @@ font-weight: bold ;
   font-weight: 700;
   line-height: 1;
   position: relative;
-  left: -19px;
+  left: -23px;
   top: -10px;
 }
 
 .unit {
-  color: #212121;
-  font-size: 28px;
+  font-size: 23px;
   font-weight: 400;
-  line-height: 36px;
+  line-height: 24px;
   line-height: 1;
+  text-decoration: none;
+}
+
+#celsius, #fahrenheit{
+  text-decoration: none;
+}
+
+.active {
+  color: #212121;
+  cursor: default;
+}
+
+.active:hover {
+  text-decoration: none;
 }
 
 .Weather canvas {
@@ -140,9 +153,9 @@ text-transform: capitalize;
 
 .weather-img-head {
   position: relative;
-  right: -54px;
-  top: -36px;
-  scale: 0.7;
+  right: -29px;
+  top: -26px;
+  scale: 0.9;
   color: #68dad8;
 }
 
@@ -192,7 +205,7 @@ text-transform: capitalize;
 footer {
   color: rgba(39, 33, 66, 0.4);
   font-size: 14px;
-  line-height: 18px;
+  line-height: 12px;
   margin-top: 55px;
   text-align: center;
 }

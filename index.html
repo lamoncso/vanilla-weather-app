@@ -24,7 +24,7 @@
          <div class="search-form">
           <form id="search-form">
             <div class="row">
-              <div class="col-9">
+              <div class="col-8">
                 <input
                   type="search"
                   placeholder="Enter a city.."
@@ -33,7 +33,7 @@
                   autocomplete="off"
                 />
               </div>
-              <div class="col-3">
+              <div class="col-4">
                 <input
                   type="submit"
                   class="btn btn-primary w-100 btn-search"
@@ -46,30 +46,31 @@
           </form>
           <div class="weatherInfo">
             <div class="row">
-              <div class="col-6">
+              <div class="col-5">
                 <h1 id="city"></h1>
                 <ul>
                   <li>
                     <span id="today">Thursday</span> <span id="current-time">19:29</span><br>
-                    <span id="description"></span>
+                    </li><li> <span id="description"></span>
                   </li>
                   <li>
                   Humidity:
-                    <strong id="humidity"></strong> <span class="unitHumidity"> %</span><span>, 
-               Wind:</span>
+                    <strong id="humidity"></strong> <span class="unitHumidity"> %</span><span> 
+               </li><li> Wind:</span>
                     <strong id="wind"></strong><span class="unitWind"> km/h</span>
                   </li>
                 </ul>
               </div>
-              <div class="col-lg-6 col-md-6 col-sm-8">
+              <div class="col-7">
                 <div class="temperature-container d-flex">
                   <img src="" class="weather-img-head" id="icon"
                   alt="current-weather-icon"/>
                   <canvas width="52" height="52"></canvas>
           
                     <span class="temperature" id="temperature"></span>
-                    <span class="unit" id="unit">°C</span>
-            
+                    <span class="unit" id="unit"><a href="#" class="active" id="celsius">°C</a></span><span class="unit">/</span>
+                    <span class="unit" ><a href="#"  id="fahrenheit">°F</a></span>
+
                 </div>
               </div>
             </div>
