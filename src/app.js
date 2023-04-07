@@ -45,10 +45,23 @@ console.log(response.data);
     changeIcon.setAttribute("alt", `${response.data.weather[0].description}`);
 }
 
-let city = "Kapstadt";
+function search(city) {
 let apiKey = "8402ccd9e55983fce71eeeaa1d2bd1fc";
 let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather?";
 let units = "metric";
 let apiUrl = `${apiEndpoint}&q=${city}&units=${units}&appid=${apiKey}`;
-
 axios.get(apiUrl).then(displayTemperature);
+
+}
+
+function handleSubmit(event){
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#search-input");
+ search(cityInputElement.value);
+}
+
+search("Budapest");
+
+
+let form=document.querySelector("#search-form");
+form.addEventListener("submit",handleSubmit);
