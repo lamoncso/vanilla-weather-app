@@ -22,11 +22,64 @@ function formatDate() {
   document.querySelector("#current-time").innerHTML = `${hour}:${minutes}`;
   document.querySelector("#today").innerHTML = `${day}`;
 }
+function displayForecast() {
+  let forecastElement = document.querySelector("#weatherForecast");
+
+  let forecastHTML = `<div class="row">`;
+
+  let days = ["Tue","Wed","Thu","Fri","Sat"];
+  days.forEach(function(day){
+  
+  forecastHTML =
+    forecastHTML +
+    `
+  <div class="col">
+              <div class="weatherForecastPreview">
+                <div class="forecast-time">${day}</div>
+               <img src="images/weather-icon.png" width="42" class="icon-img">
+                  <span class="forecast-temperature-max">12°</span>
+                  <span class="forecast-temperature-min">7°</span>
+                </div>
+              </div> `;
+ 
+  })
+forecastHTML = forecastHTML + `</div>`;
+forecastElement.innerHTML = forecastHTML;
+}
+
+/*function displayForecast() {
+
+  let forecastElement = document.querySelector("#weatherForecast")
+
+  let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+  days.forEach(function (day) {
+  
+ 
+
+  let forecastHTML = `<div class="weatherForecest row">`;
+  forecastHTML = forecastHTML +
+  `    <div class="col">
+              <div class="weatherForecastPreview">
+                <div class="forecast-time">${day}</div>
+               <i class="fa-solid fa-cloud weather-img "></i>
+               <canvas width="38" height="38"></canvas>
+                <div class="forecast-temperature">
+                  <span class="forecast-temperature-max">12°</span>
+                  <span class="forecast-temperature-min">7°</span>
+                </div>
+              </div>
+            `;
+forecastHTML = forecastHTML + `</div>`;
+}
+  );
+
+forecastElement.innerHTM = forecastHTML; 
+}*/
 
 function displayTemperature(response) {
   date = new Date();
   let day = date.getDay();
-
+  console.log(response.data);
   let cityElement = document.querySelector("#city");
   let weatherDiscription = document.querySelector("#description");
   let temperatureElement = document.querySelector("#temperature");
@@ -103,3 +156,5 @@ let celsiusElement = document.querySelector("#celsius");
 celsiusElement.addEventListener("click", showCelsius);
 
 search("Budapest");
+
+displayForecast();

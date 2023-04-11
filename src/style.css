@@ -105,7 +105,6 @@ font-weight: bold ;
   font-size: 16px;
   font-weight: 500;
   line-height: 26px;
-  margin-bottom: 17px;
 }
 
 li::first-letter{
@@ -133,7 +132,6 @@ text-transform: capitalize;
   line-height: 20px;
   text-align: center;
   font-weight: 700;
-  margin-bottom: -10px;
 }
 
 .WeatherForecast canvas {
@@ -163,7 +161,6 @@ text-transform: capitalize;
   border: 1px solid rgb(255, 243, 116);
   padding: 10px;
   border-radius: 6px;
-  margin: 0 -5px;
   background: radial-gradient(
     circle at 10% 20%,
     rgb(254, 255, 165) 0%,
