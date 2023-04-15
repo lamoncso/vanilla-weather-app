@@ -21,65 +21,54 @@ function formatDate() {
   }
   document.querySelector("#current-time").innerHTML = `${hour}:${minutes}`;
   document.querySelector("#today").innerHTML = `${day}`;
+  return `${day} ${hour}:${minutes}`;
 }
-function displayForecast() {
-  let forecastElement = document.querySelector("#weatherForecast");
 
-  let forecastHTML = `<div class="row">`;
+function formatDay(timestamp){
+let date = new Date(timestamp * 1000);
+let day = date.getDay();
+let days = ["Sun", "Mon", "Tue", "Wed", "Thu","Fri","Sat"]
 
-  let days = ["Tue","Wed","Thu","Fri","Sat"];
-  days.forEach(function(day){
+return days[day];
+}
+
+function displayForecast(response) {
+  console.log(response.data);
+
+  let forecast = response.data.daily;
   
+  let forecastElement = document.querySelector("#weatherForecast");
+  
+  let forecastHTML = `<div class="row">`;
+  
+  forecast.forEach(function (forecastDay, index) {
+    if (index > 0 && index < 6) {
+   
   forecastHTML =
     forecastHTML +
     `
   <div class="col">
               <div class="weatherForecastPreview">
-                <div class="forecast-time">${day}</div>
-               <img src="images/weather-icon.png" width="42" class="icon-img">
-                  <span class="forecast-temperature-max">12°</span>
-                  <span class="forecast-temperature-min">7°</span>
+                <div class="forecast-time">${formatDay(forecastDay.time)}</div>
+               <img 
+               src= "${forecastDay.condition.icon_url}"
+               width="50" 
+               class="icon-img">
+                  <span class="forecast-temperature-max">${Math.round(forecastDay.temperature.maximum)}°</span>
+                  <span class="forecast-temperature-min">${Math.round(forecastDay.temperature.minimum)}°</span>
                 </div>
               </div> `;
- 
+    }
   })
 forecastHTML = forecastHTML + `</div>`;
 forecastElement.innerHTML = forecastHTML;
 }
 
-/*function displayForecast() {
-
-  let forecastElement = document.querySelector("#weatherForecast")
-
-  let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
-  days.forEach(function (day) {
-  
- 
-
-  let forecastHTML = `<div class="weatherForecest row">`;
-  forecastHTML = forecastHTML +
-  `    <div class="col">
-              <div class="weatherForecastPreview">
-                <div class="forecast-time">${day}</div>
-               <i class="fa-solid fa-cloud weather-img "></i>
-               <canvas width="38" height="38"></canvas>
-                <div class="forecast-temperature">
-                  <span class="forecast-temperature-max">12°</span>
-                  <span class="forecast-temperature-min">7°</span>
-                </div>
-              </div>
-            `;
-forecastHTML = forecastHTML + `</div>`;
-}
-  );
-
-forecastElement.innerHTM = forecastHTML; 
-}*/
 
 function displayTemperature(response) {
-  date = new Date();
+  let date = new Date();
   let day = date.getDay();
-  console.log(response.data);
+
   let cityElement = document.querySelector("#city");
   let weatherDiscription = document.querySelector("#description");
   let temperatureElement = document.querySelector("#temperature");
@@ -105,6 +94,7 @@ function displayTemperature(response) {
     `${response.data.daily[day].condition.icon_url}`
   );
   changeIcon.setAttribute("alt", `${response.data.daily[day].condition.icon}`);
+
 }
 
 function search(city) {
@@ -113,6 +103,7 @@ function search(city) {
   let units = "metric";
   let apiUrl = `${apiEndpoint}query=${city}&key=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(displayTemperature);
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function handleSubmit(event) {
@@ -156,5 +147,3 @@ let celsiusElement = document.querySelector("#celsius");
 celsiusElement.addEventListener("click", showCelsius);
 
 search("Budapest");
-
-displayForecast();

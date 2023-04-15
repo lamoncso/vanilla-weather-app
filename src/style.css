@@ -161,7 +161,7 @@ text-transform: capitalize;
 
 .weatherForecastPreview {
   border: 1px solid rgb(255, 243, 116);
-  padding: 10px;
+  padding: 5px;
   border-radius: 6px;
   background: radial-gradient(
     circle at 10% 20%,
