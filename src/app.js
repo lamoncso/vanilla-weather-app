@@ -42,7 +42,7 @@ function displayForecast(response) {
   let forecastHTML = `<div class="row">`;
   
   forecast.forEach(function (forecastDay, index) {
-    if (index > 0 && index < 6) {
+    if (index < 5) {
    
   forecastHTML =
     forecastHTML +
@@ -89,9 +89,10 @@ function displayTemperature(response) {
   formatDate();
 
   let changeIcon = document.querySelector("#icon");
+  let iconElement = response.data.daily[day].condition.icon_url;
   changeIcon.setAttribute(
     "src",
-    `${response.data.daily[day].condition.icon_url}`
+    `${iconElement}`
   );
   changeIcon.setAttribute("alt", `${response.data.daily[day].condition.icon}`);
 

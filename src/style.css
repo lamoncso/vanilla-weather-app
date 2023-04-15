@@ -13,6 +13,7 @@ body {
   display: block;
   max-width: 200px;
   margin-bottom: 20px;
+ 
 }
 
 .weather {
@@ -23,10 +24,13 @@ body {
   font-family: Cerebri-Sans, Helvetica, Arial, sans-serif;
   padding: 40px;
   min-width: 544px;
+  font-family: 'Comfortaa', cursive;
 }
 
 .search-form {
   margin-bottom: 30px;
+  font-family: 'Comfortaa', cursive;
+ 
 }
 .search-input {
   color: green;
@@ -36,6 +40,7 @@ body {
   color: #75695e;
   background-color: #f6d6bd;
   border-color: #75695e;
+
 }
 
 .btn-search:hover {
@@ -49,11 +54,12 @@ body {
 }
 .weather h1 {
   color: #272142;
-  font-size: 38px;
+  font-size: 35px;
   font-weight: 700;
   line-height: 29px;
   line-height: 48px;
   margin: 0px 0 10px;
+  font-family: 'Comfortaa', cursive;
 }
 
 .unitHumidity ,.unitWind {
@@ -66,13 +72,12 @@ font-weight: bold ;
 
 .temperature {
   color: #212121;
-  font-size: 80px;
+  font-size: 77px;
   font-weight: 400;
   font-weight: 700;
   line-height: 1;
   position: relative;
-  left: -23px;
-  top: -10px;
+  font-family: 'Comfortaa', cursive;
 }
 
 .unit {
@@ -81,6 +86,7 @@ font-weight: bold ;
   line-height: 24px;
   line-height: 1;
   text-decoration: none;
+  font-family: 'Comfortaa', cursive;
 }
 
 #celsius, #fahrenheit{
@@ -107,6 +113,7 @@ font-weight: bold ;
   font-size: 16px;
   font-weight: 500;
   line-height: 26px;
+  font-family: 'Comfortaa', cursive;
 }
 
 li::first-letter{
@@ -123,9 +130,10 @@ text-transform: capitalize;
 
 .weatherForecast {
   border-bottom: 1px solid #f9f7fe;
-  margin: 40px 0;
-  padding-bottom: 50px;
+  margin: 27px 0;
+  padding-bottom: 7px;
   text-align: center;
+  font-family: 'Comfortaa', cursive;
 }
 
 .forecast-time {
@@ -139,16 +147,6 @@ text-transform: capitalize;
 .WeatherForecast canvas {
   display: block;
   margin: 20px auto;
-}
-
-.weather-img {
-  color: #68dad8;
-  font-size: 23px;
-  line-height: 1.5;
-  text-align: center;
-  margin-bottom: 9px;
-  position: relative;
-  left: 23px;
 }
 
 .weather-img-head {
@@ -179,7 +177,7 @@ text-transform: capitalize;
 }
 
 .forecast-temperature-min {
-  color: #64cdcb (225, 60, 159, 0.4);
+  color: #4ab3b1 (225, 60, 159, 0.4);
   margin-left: 10px;
   opacity: 0.6;
 }
