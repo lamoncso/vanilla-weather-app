@@ -54,9 +54,11 @@ function displayForecast(response) {
                src= "${forecastDay.condition.icon_url}"
                width="50" 
                class="icon-img">
+               <div>
                   <span class="forecast-temperature-max">${Math.round(forecastDay.temperature.maximum)}°</span>
                   <span class="forecast-temperature-min">${Math.round(forecastDay.temperature.minimum)}°</span>
-                </div>
+                  </div>
+                  </div>
               </div> `;
     }
   })
