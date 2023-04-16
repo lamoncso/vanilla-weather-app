@@ -76,7 +76,6 @@ function displayTemperature(response) {
   let currentWindSpeed = document.querySelector("#wind");
 
   celsiusTemperature = Math.round(response.data.daily[day].temperature.day);
-  celsiusElement.classList.add("active");
 
   cityElement.innerHTML = response.data.city;
   weatherDiscription.innerHTML = response.data.daily[day].condition.description;
@@ -113,38 +112,7 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 
-function showCelsius(event) {
-  event.preventDefault();
-
-  let temperatureElement = document.querySelector("#temperature");
-
-  celsiusElement.classList.add("active");
-  fahrenheitElement.classList.remove("active");
-
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-
-function showFahrenheit(event) {
-  event.preventDefault();
-
-  let temperatureElement = document.querySelector("#temperature");
-
-  fahrenheitElement.classList.add("active");
-  celsiusElement.classList.remove("active");
-
-  let fahrenheitValue = (celsiusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitValue);
-}
-
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
-
-let celsiusTemperature = null;
-
-let fahrenheitElement = document.querySelector("#fahrenheit");
-fahrenheitElement.addEventListener("click", showFahrenheit);
-
-let celsiusElement = document.querySelector("#celsius");
-celsiusElement.addEventListener("click", showCelsius);
 
 search("Budapest");
