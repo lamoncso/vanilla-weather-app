@@ -14,75 +14,99 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <style>
-  @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Cutive+Mono&family=Petit+Formal+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&family=Reenie+Beanie&family=Tilt+Prism&display=swap');
-</style>
-<link rel="stylesheet" href="src/style.css">
-<script src="https://kit.fontawesome.com/8291fbbd8a.js" crossorigin="anonymous"></script>
+      @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Cutive+Mono&family=Petit+Formal+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&family=Reenie+Beanie&family=Tilt+Prism&display=swap");
+    </style>
+    <link rel="stylesheet" href="src/style.css" />
+    <script
+      src="https://kit.fontawesome.com/8291fbbd8a.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="app">
       <div class="container">
         <div class="weather">
-       <a href="#" target="_blank" rel="noopener noreferrer" class="logo"><img src="images/logo.jpg" alt="logo"></a>
-         <div class="search-form">
+          <a href="#" target="_blank" rel="noopener noreferrer" class="logo"
+            ><img src="images/logo.jpg" alt="logo"
+          /></a>
           <form id="search-form">
-            <div class="row">
-              <div class="col-8">
-                <input
-                  type="search"
-                  placeholder="Enter a city.."
-                  class="form-control search-input"
-                  id="search-input"
-                  autocomplete="off"
-                />
-              </div>
-              <div class="col-4">
-                <input
-                  type="submit"
-                  class="btn btn-primary w-100 btn-search"
-                  id="btn-search"
-                  value="Search"
-                />
-              </div>
+            <div class="search-form container-fluid">
+              <div class="row">
+                <div class="col-sm-8">
+                  <input
+                    type="search"
+                    placeholder="Enter a city.."
+                    class="form-control search-input"
+                    id="search-input"
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="col-sm-4">
+                  <input
+                    type="submit"
+                    class="btn btn-primary w-100 btn-search"
+                    id="btn-search"
+                    value="Search"
+                  />
+                </div>
               </div>
             </div>
           </form>
-          <div class="weatherInfo">
+          <div class="weatherInfo mt-3 container-fluid">
             <div class="row">
-              <div class="col-5">
+              <div class="col-sm-5">
                 <h1 id="city"></h1>
                 <ul>
                   <li>
-                    <span id="today">Thursday</span> <span id="current-time">19:29</span><br>
-                    </li><li> <span id="description"></span>
+                    <span id="today">Thursday</span>
+                    <span id="current-time">19:29</span><br />
                   </li>
                   <li>
-                  Humidity:
-                    <strong id="humidity"></strong> <span class="unitHumidity"> %</span><span> 
-               </li><li> Wind:</span>
-                    <strong id="wind"></strong><span class="unitWind"> km/h</span>
+                    <span id="description"></span>
+                  </li>
+                  <li>
+                    Humidity:
+                    <strong id="humidity"></strong>
+                    <span class="unitHumidity"> %</span>
+                  </li>
+                  <li>
+                    Wind: <strong id="wind"></strong
+                    ><span class="unitWind"> km/h</span>
                   </li>
                 </ul>
               </div>
-              <div class="col-7">
+              <div class="col-sm-7">
                 <div class="temperature-container d-flex">
-                  <img src="" class="weather-img-head" id="icon"
-                  alt="current-weather-icon"/>
+                  <img
+                    src=""
+                    class="weather-img-head"
+                    id="icon"
+                    alt="current-weather-icon"
+                  />
                   <canvas width="52" height="52"></canvas>
-          
-                    <span class="temperature" id="temperature"></span>
-                    <span class="unit" id="celsius">°C</span>
 
+                  <span class="temperature mt-3" id="temperature"></span>
+                  <span class="unit" id="celsius">°C</span>
                 </div>
               </div>
             </div>
           </div>
-          <div class="weatherForecast" id="weatherForecast">
-          </div>      
+          <div
+            class="weatherForecast container-fluid"
+            id="weatherForecast"
+          ></div>
           <footer>
-            This project was coded by <a href="#" target="_blank">Monika Lauko</a><br/>and is
-            <a href="https://github.com/lamoncso/vanilla-weather-app" target="_blank">open-sourced on GitHub</a> and
-            <a href="https://app.netlify.com" target="_blank">hosted on Netlify</a>
+            This project was coded by
+            <a href="#" target="_blank">Monika Lauko</a><br />and is
+            <a
+              href="https://github.com/lamoncso/vanilla-weather-app"
+              target="_blank"
+              >open-sourced on GitHub</a
+            >
+            and
+            <a href="https://app.netlify.com" target="_blank"
+              >hosted on Netlify</a
+            >
           </footer>
         </div>
       </div>

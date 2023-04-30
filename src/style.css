@@ -13,7 +13,6 @@ body {
   display: block;
   max-width: 200px;
   margin-bottom: 20px;
- 
 }
 
 .weather {
@@ -23,14 +22,13 @@ body {
   color: #878787;
   font-family: Cerebri-Sans, Helvetica, Arial, sans-serif;
   padding: 40px;
-  min-width: 544px;
-  font-family: 'Comfortaa', cursive;
+  font-family: "Comfortaa", cursive;
+  min-width: 430px;
 }
 
 .search-form {
   margin-bottom: 30px;
-  font-family: 'Comfortaa', cursive;
- 
+  font-family: "Comfortaa", cursive;
 }
 .search-input {
   color: green;
@@ -38,19 +36,18 @@ body {
 
 .btn-search {
   color: #75695e;
-   background: radial-gradient(
+  background: radial-gradient(
     circle at 10% 20%,
     rgb(254, 255, 165) 0%,
     rgb(255, 232, 182) 90%
   );
   border-color: #bae3ff;
-
 }
 
 .btn-search:hover {
   background-color: #f6d6bd;
   border-color: #75695e;
-  color:#797A7B;
+  color: #797a7b;
 }
 .weather h1 {
   color: #272142;
@@ -59,18 +56,17 @@ body {
   line-height: 29px;
   line-height: 48px;
   margin: 0px 0 10px;
-  font-family: 'Comfortaa', cursive;
+  font-family: "Comfortaa", cursive;
 }
 
-
-.unitHumidity ,.unitWind {
+.unitHumidity,
+.unitWind {
   color: #f65282;
 }
 
 #current-time {
-font-weight: bold ;
+  font-weight: bold;
 }
-
 
 .temperature {
   color: #212121;
@@ -78,8 +74,7 @@ font-weight: bold ;
   font-weight: 400;
   font-weight: 700;
   line-height: 1;
-  position: relative;
-  font-family: 'Comfortaa', cursive;
+  font-family: "Comfortaa", cursive;
 }
 
 .unit {
@@ -88,10 +83,10 @@ font-weight: bold ;
   line-height: 24px;
   line-height: 1;
   text-decoration: none;
-  font-family: 'Comfortaa', cursive;
+  font-family: "Comfortaa", cursive;
 }
 
-#celsius{
+#celsius {
   text-decoration: none;
 }
 
@@ -115,11 +110,11 @@ font-weight: bold ;
   font-size: 16px;
   font-weight: 500;
   line-height: 26px;
-  font-family: 'Comfortaa', cursive;
+  font-family: "Comfortaa", cursive;
 }
 
-li::first-letter{
-text-transform: capitalize;
+li::first-letter {
+  text-transform: capitalize;
 }
 
 .weatherInfo ul strong {
@@ -135,11 +130,11 @@ text-transform: capitalize;
   margin: 27px 0;
   padding-bottom: 7px;
   text-align: center;
-  font-family: 'Comfortaa', cursive;
+  font-family: "Comfortaa", cursive;
 }
 
 .forecast-time {
-  color: rgba(39, 33, 66, 0.4);;
+  color: rgba(39, 33, 66, 0.4);
   font-size: 16px;
   line-height: 20px;
   text-align: center;
@@ -152,9 +147,6 @@ text-transform: capitalize;
 }
 
 .weather-img-head {
-  position: relative;
-  right: -50px;
-  top: -26px;
   scale: 0.9;
 }
 

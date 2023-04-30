@@ -24,30 +24,29 @@ function formatDate() {
   return `${day} ${hour}:${minutes}`;
 }
 
-function formatDay(timestamp){
-let date = new Date(timestamp * 1000);
-let day = date.getDay();
-let days = ["Sun", "Mon", "Tue", "Wed", "Thu","Fri","Sat"]
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-return days[day];
+  return days[day];
 }
 
 function displayForecast(response) {
   console.log(response.data);
 
   let forecast = response.data.daily;
-  
+
   let forecastElement = document.querySelector("#weatherForecast");
-  
+
   let forecastHTML = `<div class="row">`;
-  
+
   forecast.forEach(function (forecastDay, index) {
     if (index < 5) {
-   
-  forecastHTML =
-    forecastHTML +
-    `
-  <div class="col">
+      forecastHTML =
+        forecastHTML +
+        `
+  <div class="col-sm mb-2 ms-0 me-0">
               <div class="weatherForecastPreview">
                 <div class="forecast-time">${formatDay(forecastDay.time)}</div>
                <img 
@@ -55,17 +54,20 @@ function displayForecast(response) {
                width="50" 
                class="icon-img">
                <div>
-                  <span class="forecast-temperature-max">${Math.round(forecastDay.temperature.maximum)}°</span>
-                  <span class="forecast-temperature-min">${Math.round(forecastDay.temperature.minimum)}°</span>
+                  <span class="forecast-temperature-max">${Math.round(
+                    forecastDay.temperature.maximum
+                  )}°</span>
+                  <span class="forecast-temperature-min">${Math.round(
+                    forecastDay.temperature.minimum
+                  )}°</span>
                   </div>
                   </div>
               </div> `;
     }
-  })
-forecastHTML = forecastHTML + `</div>`;
-forecastElement.innerHTML = forecastHTML;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
 }
-
 
 function displayTemperature(response) {
   let date = new Date();
@@ -91,12 +93,8 @@ function displayTemperature(response) {
 
   let changeIcon = document.querySelector("#icon");
   let iconElement = response.data.daily[day].condition.icon_url;
-  changeIcon.setAttribute(
-    "src",
-    `${iconElement}`
-  );
+  changeIcon.setAttribute("src", `${iconElement}`);
   changeIcon.setAttribute("alt", `${response.data.daily[day].condition.icon}`);
-
 }
 
 function search(city) {
