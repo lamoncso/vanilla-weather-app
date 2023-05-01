@@ -9,9 +9,10 @@ body {
   background-repeat: no-repeat;
 }
 
-.logo img {
+.logo{
   display: block;
-  max-width: 200px;
+  max-width: 40%;
+  height: auto;
   margin-bottom: 20px;
 }
 
